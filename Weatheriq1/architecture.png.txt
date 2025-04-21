@@ -1,0 +1,28 @@
+## 🌐 Project Architecture
+
+```
+                 OpenWeatherMap API
+                          |
+              --------------------------
+              |         |         |    |
+        Real-time  Forecast  Historical  Air Quality
+              |         |         |    |
+              +---------+---------+----+
+                        |
+                Phase 2: Collectors
+                        |
+                   PostgreSQL
+                        |
+                Phase 3: Ingestion
+             (Transform + Validation)
+                        |
+         +--------------+-------------+
+         |                            |
+  SentenceTransformer           pgvector
+         |                            |
+         +--------------+-------------+
+                        |
+              Phase 4: FastAPI RAG API
+                        |
+                      Client
+```
