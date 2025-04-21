@@ -67,8 +67,9 @@ WeatherIQ/
 ├── phase4/                              # RAG System
 │   ├── api/
 │   │   ├── rag_api.py                   # FastAPI application
-│   │   ├── embedder.py                 # Embedding generation
-│   │   ├── storage.py                  # pgvector search and storage
+│   ├── embeddings/
+│       ├── embedder.py                 # Embedding generation
+│       ├── storage.py                  # pgvector search and storage
 │
 ├── db.py
 ├── main.py
